@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1c3d4b, #203a43, #358e5b);
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    background: #0a3e4b;
+    padding: 15px;
+}
+
+header button {
+    background: #4fd675;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #0a3e4b;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header button:hover {
+    background: #3dbf62;
+}
+
+section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.flex img {
+    width: 50%;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.flex .text {
+    flex: 1;
+}
+
+.flex .text h2 {
+    color: #4fd675;
+    margin-bottom: 15px;
+}
+
+.benefits {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.benefits h2 {
+    color: #4fd675;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.benefits ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.benefits ul li {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+
+.benefits ul li::before {
+    content: "✔ ";
+    color: #4fd675;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #bbb;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+    }
+
+    .flex img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1c3d4b, #203a43, #358e5b);
+    color: #fff;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+#letreiro {
+    max-height: 300px;
+    width: auto;
+}
+
+#logo {
+    max-height: 300px;
+    width: auto;
+}
+
+header h1 {
+    color: #4fd675;
+    font-size: 2rem;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #4fd675;
+}
+
+/* Cards */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 60px auto;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    flex: 1;
+    /* ocupa espaço restante para empurrar footer */
+}
+
+.card {
+    background: #116a80;
+    border-radius: 20px;
+    padding: 50px;
+    flex: 1 1 340px;
+    /* mínimo 340px */
+    max-width: 380px;
+    /* máximo no desktop */
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card h3 {
+    color: #4fd675;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    /* maior que antes */
+}
+
+.card p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55);
+    background: #145d6d;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 95%;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #bbb;
+    font-size: 0.9rem;
+    margin-top: auto;
+    /* gruda no fim */
+}
