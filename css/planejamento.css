@@ -49,10 +49,14 @@ main {
 .card {
     background: rgba(0, 0, 0, 0.35);
     border-radius: 15px;
-    padding: 30px 20px;
-    text-align: center;
+    padding: 20px 15px;
+    /* menor padding */
+    text-align: left;
+    /* melhor leitura para listas */
     border: 2px solid #4fd675;
     transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 0.95rem;
+    /* texto um pouco menor */
 }
 
 .card:hover {
@@ -77,4 +81,16 @@ footer {
     background: #111;
     color: #bbb;
     font-size: 0.9rem;
+}
+
+.valores-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+    color: #eee;
+}
+
+.valores-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
 }
