@@ -36,61 +36,75 @@ header button:hover {
     background: #3dbf62;
 }
 
+/* Layout principal */
 main {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 0 20px;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
 }
 
+/* Card geral */
 .card {
-    background: rgba(0, 0, 0, 0.35);
-    border-radius: 15px;
-    padding: 20px 15px;
-    /* menor padding */
-    text-align: left;
-    /* melhor leitura para listas */
-    border: 2px solid #4fd675;
-    transition: transform 0.3s, box-shadow 0.3s;
-    font-size: 0.95rem;
-    /* texto um pouco menor */
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 15px;
+  padding: 20px;
+  border: 2px solid #4fd675;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
 }
 
 .card h2 {
-    margin-bottom: 15px;
-    font-size: 1.8rem;
-    color: #4fd675;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #4fd675;
 }
 
-.card p {
-    font-size: 1rem;
-    color: #eee;
+/* Valores ocupa largura total */
+.card.full {
+  grid-column: 1 / -1;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #111;
-    color: #bbb;
-    font-size: 0.9rem;
+/* Grid dos valores */
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
 }
 
-.valores-list {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-top: 10px;
-    color: #eee;
+/* Cada item dos valores */
+.valor-item {
+  background: #145d6d;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.valores-list li {
-    margin-bottom: 10px;
-    line-height: 1.5;
+.valor-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.valor-item .icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  color: #4fd675;
+}
+
+.valor-item p {
+  font-size: 0.95rem;
+  color: #eee;
+  line-height: 1.4;
 }

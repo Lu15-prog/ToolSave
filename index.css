@@ -23,15 +23,12 @@ header {
     padding: 15px;
 }
 
-#letreiro {
-    max-height: 300px;
-    width: auto;
+#letreiro,
+#logo {
+    height: 120px;  /* altura fixa */
+    width: auto;    /* largura proporcional */
 }
 
-#logo {
-    max-height: 300px;
-    width: auto;
-}
 
 header h1 {
     color: #4fd675;
